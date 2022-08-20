@@ -29,7 +29,7 @@ const UserSchema = new Schema(
       type: String,
       default: "",
     },
-    following: {
+    followings: {
       type: Array,
       default: [],
     },

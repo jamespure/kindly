@@ -6,7 +6,7 @@ export interface IUser extends Document {
   password: string;
   profileImage: string;
   coverImage: string;
-  following: [];
+  followings: [];
   followers: [];
   about: string;
   dob: Date;
