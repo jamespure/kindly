@@ -9,6 +9,7 @@ const authUser = (req: any, res: any, next: NextFunction) => {
   try {
     jwt.verify(token, config.auth.token_secret!, (err: any, user: any) => {
       req.user = user;
+      next();
     });
   } catch (err) {
     return res.status(500).json(err);
