@@ -9,7 +9,7 @@
   dependencies:
     helmet "*"
 
-helmet@*, helmet@^5.1.1:
+helmet@*:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/helmet/-/helmet-5.1.1.tgz#609823c5c2e78aea62dd9afc8f544ca409da5e85"
   integrity sha512-/yX0oVZBggA9cLJh8aw3PPCfedBnbd7J2aowjzsaWwZh7/UFY0nccn/aHAggIgWUFfnykX8GKd3a1pSbrmlcVQ==

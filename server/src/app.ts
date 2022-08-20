@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import helmet from "helmet";
 import { config } from "./config/config";
 import auth from "./routes/auth";
+import users from "./routes/users";
 
 const app: Application = express();
 
@@ -20,6 +21,7 @@ app.use(express.json());
 
 // ROUTES MIDDLEWARES
 app.use("/api/v1/auth", auth);
+app.use("/api/v1/users", users);
 
 app.listen(config.app.port, () =>
   console.log("Server is running on: http://localhost:" + config.app.port)
