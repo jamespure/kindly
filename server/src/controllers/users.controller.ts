@@ -50,16 +50,16 @@ export const deleteUser = async (req: any, res: any) => {
 // FALLOW A USER
 export const followUser = async (req: any, res: any) => {
   try {
-    if (req.params._id === req.body._id)
+    if (req.params._id === req.body.user_id)
       return res.status(403).json({ message: "you can not follow yourself" });
     const currentUser = await User.findById(req.params._id);
-    const user = await User.findById(req.body._id);
+    const user = await User.findById(req.body.user_id);
     const followings: followings = currentUser!.followings;
-    if (followings.includes(await req.body._id))
+    if (followings.includes(await req.body.user_id))
       return res.status(403).json("you allready follow this user");
 
     await user!.updateOne({ $push: { followers: req.params._id } });
-    await currentUser!.updateOne({ $push: { followings: req.body._id } });
+    await currentUser!.updateOne({ $push: { followings: req.body.user_id } });
     res.status(200).json("user have been followed");
   } catch (err) {
     res.status(500).json(err);
@@ -69,16 +69,16 @@ export const followUser = async (req: any, res: any) => {
 //UNFALLOW A USER
 export const unfollowUser = async (req: any, res: any) => {
   try {
-    if (req.params._id === req.body._id)
+    if (req.params._id === req.body.user_id)
       return res.status(403).json({ message: "you can not unfollow yourself" });
     const currentUser = await User.findById(req.params._id);
-    const user = await User.findById(req.body._id);
+    const user = await User.findById(req.body.user_id);
     const followings: followings = currentUser!.followings;
-    if (!followings.includes(req.body._id))
+    if (!followings.includes(req.body.user_id))
       return res.status(403).json("you allready unfollow this user");
 
     await user!.updateOne({ $pull: { followers: req.params._id } });
-    await currentUser!.updateOne({ $pull: { followings: req.body._id } });
+    await currentUser!.updateOne({ $pull: { followings: req.body.user_id } });
     res.status(200).json("user have been unfollowed");
   } catch (err) {
     res.status(500).json(err);
