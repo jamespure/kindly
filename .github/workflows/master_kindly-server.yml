@@ -26,7 +26,7 @@ jobs:
           yarn install
           yarn build --if-present
           yarn test --if-present
-        working-directory: portalDirectory/subDirectory
+        working-directory: kindly/server
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
