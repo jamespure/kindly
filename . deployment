@@ -1,2 +1,2 @@
 [config]
-project = kindly/server/dist
+project =./server/dist
