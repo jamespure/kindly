@@ -54,4 +54,4 @@ jobs:
           app-name: 'kindly-server'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6CB404F0E18C447B8E00670044F9133C }}
-          package: kindly/server
+          package: .
