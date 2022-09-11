@@ -25,7 +25,16 @@ export const registerUser = async (req: Request, res: Response) => {
   try {
     await user.save();
     return res.json({
-      user: { username: user.username, email: user.email, _id: user._id },
+      user: {
+        username: user.username,
+        email: user.email,
+        profileImage: user.profileImage,
+        coverImage: user.coverImage,
+        followings: user.followings,
+        followers: user.followers,
+        about: user.about,
+        dob: user.dob,
+      },
     });
   } catch (err) {
     res.status(500).json(err);
@@ -58,5 +67,8 @@ export const loginUser = async (req: Request, res: Response) => {
   );
 
   // SET HEADERS
-  return res.header("auth-token", token).json({ token: token });
+  return res.header("auth-token", token).json({
+    token: token,
+    user: { username: user.username, email: user.email, _id: user._id },
+  });
 };
