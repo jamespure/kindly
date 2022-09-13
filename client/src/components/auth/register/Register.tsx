@@ -5,10 +5,9 @@ import {
   useRegisterUserMutation,
 } from "../../../services/authApi";
 import login_1 from "../../../assets/images/auth_1.svg";
-
-import "../styles.css";
 import { useAppDispatch } from "../../../hooks/reduxHooks";
 import { setCurrentUser } from "../../../redux/features/authSlice";
+import colors from "../../../sass/abstracts/_colors.module.scss";
 
 const Register: FC = () => {
   const [
@@ -95,15 +94,10 @@ const Register: FC = () => {
     });
 
     return () => clearInterval(loginInterval);
-  }, [dispatch, isLoginSuccess, loginData]);
+  }, [dispatch, isLoginSuccess, loginData, navigate]);
 
   return (
     <div className="login">
-      <div className="blur" style={{ top: "70%", left: "-200px" }}></div>
-      <div
-        className="blur"
-        style={{ top: "0", left: "-500px", background: "#DDA82A" }}
-      ></div>
       <div className="">
         <img src={login_1} alt="" />
       </div>

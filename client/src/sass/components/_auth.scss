@@ -1,3 +1,5 @@
+@import "../abstracts/_variables.scss";
+
 .login {
   display: flex;
   flex-direction: column;
@@ -5,13 +7,4 @@
   width: 90%;
   margin: 0 auto;
   justify-content: center;
-}
-
-.blur {
-  position: absolute;
-  width: 35rem;
-  height: 21rem;
-  border-radius: 50%;
-  background: #4461f2;
-  filter: blur(118px);
 }

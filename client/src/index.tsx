@@ -5,7 +5,7 @@ import { store } from "./redux/store";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./assets/fonts/ChewmepersonaluseBold-OV1n8.otf";
-import "./index.css";
+import "./sass/index.scss";
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);

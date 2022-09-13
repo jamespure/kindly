@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600&display=swap");
+
+@font-face {
+  font-family: Chew;
+  font-weight: bold;
+  src: url("../assets/fonts/ChewmepersonaluseBold-OV1n8.otf") format("opentype");
+}
+
+@import "./components/auth.scss";
+@import "./components/header.scss";
+@import "./components/nav";
+@import "./components/blur";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  margin: 0;
+  font-size: 1rem;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}

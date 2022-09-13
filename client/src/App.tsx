@@ -1,12 +1,17 @@
 import { FC } from "react";
 import { Routes, Route } from "react-router-dom";
+import { Blur, Header } from "./components";
 import Auth from "./pages/auth/Auth";
 
 const App: FC = () => {
   return (
-    <Routes>
-      <Route path="/auth/*" element={<Auth />} />
-    </Routes>
+    <>
+      <Blur />
+      <Header />
+      <Routes>
+        <Route path="/auth/*" element={<Auth />} />
+      </Routes>
+    </>
   );
 };
 

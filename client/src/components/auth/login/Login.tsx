@@ -2,8 +2,6 @@ import { ChangeEvent, FC, SyntheticEvent, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useLoginUserMutation } from "../../../services/authApi";
 import login_1 from "../../../assets/images/auth_1.svg";
-
-import "../styles.css";
 import { useAppDispatch } from "../../../hooks/reduxHooks";
 import { setCurrentUser } from "../../../redux/features/authSlice";
 
@@ -64,11 +62,6 @@ const Login: FC = () => {
 
   return (
     <div className="login">
-      <div className="blur" style={{ top: "70%", left: "-200px" }}></div>
-      <div
-        className="blur"
-        style={{ top: "0", left: "-500px", background: "#DDA82A" }}
-      ></div>
       <div className="">
         <img src={login_1} alt="" />
       </div>
