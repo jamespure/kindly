@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Login, Register } from "../../components";
+import { Login, Register } from "../components/";
 
 const Auth: FC = () => {
   return (

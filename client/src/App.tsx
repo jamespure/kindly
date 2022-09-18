@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Blur, Header } from "./components";
-import Auth from "./pages/auth/Auth";
+import { AuthPage, ProfilePage } from "./pages";
 
 const App: FC = () => {
   return (
@@ -9,7 +9,8 @@ const App: FC = () => {
       <Blur />
       <Header />
       <Routes>
-        <Route path="/auth/*" element={<Auth />} />
+        <Route path="/auth/*" element={<AuthPage />} />
+        <Route path="/profile/*" element={<ProfilePage />} />
       </Routes>
     </>
   );
